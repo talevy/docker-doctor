@@ -37,7 +37,7 @@ class DockerDoctor
       'Hostname' => "#{name}-#{image.id}",
     })
 
-    @container.start({"PublishAllPorts" => true})
+    @container.start({"PublishAllPorts" => true, "CapAdd" => "NET_ADMIN"})
     @host[:ports] = @container.json["NetworkSettings"]["Ports"]
   end
 

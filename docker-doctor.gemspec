@@ -11,5 +11,5 @@ Gem::Specification.new do |s|
   s.files           = ["lib/docker_doctor.rb"]
 
   # Gem dependencies
-  s.add_runtime_dependency 'docker-api', '>= 1.21.4'
+  s.add_runtime_dependency 'docker-api', '~> 1.21'
 end
