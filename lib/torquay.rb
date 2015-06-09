@@ -1,4 +1,4 @@
-class DockerDoctor
+class Torquay 
   def initialize
     require 'docker'
     Docker.options = { :write_timeout => 300, :read_timeout => 300 }

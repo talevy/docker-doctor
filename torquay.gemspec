@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 
-  s.name            = 'docker-doctor'
+  s.name            = 'torquayish'
   s.version         = '0.0.2'
   s.licenses        = ['apache-2.0']
   s.summary         = "Wrapper utility functions around Docker image creation and maintenance"
