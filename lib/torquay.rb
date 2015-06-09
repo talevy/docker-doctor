@@ -41,6 +41,14 @@ class Torquay
     @host[:ports] = @container.json["NetworkSettings"]["Ports"]
   end
 
+  def set_network_delay(ms)
+    @container.exec(['tc', 'qdisc', 'add', 'dev', 'eth0', 'root', 'netem', 'delay', '#{ms}ms'])
+  end
+
+  def remove_network_delay
+    @container.exec(['tc', 'qdisc', 'del', 'dev', 'eth0', 'root', 'netem'])
+  end
+
   def cleanup
     if @container
       @container.stop
